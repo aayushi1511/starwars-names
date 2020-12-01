@@ -1,14 +1,16 @@
 {
   "name": "marvelandstarwarsheroes",
-  "version": "1.4.0-beta.0",
+  "version": "0.0.0-development",
   "description": "Get random Star Wars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aayushi1511/starwars-names.git"
+    "url": "https://github.com/aayushi1511/starwars-names.git"
   },
   "keywords": [
     "random",
@@ -24,5 +26,14 @@
   "dependencies": {
     "unique-random-array": "2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "4.2.0",
+    "commitizen": "4.2.2",
+    "cz-conventional-changelog": "3.3.0",
+    "mocha": "8.2.1",
+    "semantic-release": "^17.3.0"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
